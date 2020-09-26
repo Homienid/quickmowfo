@@ -1,0 +1,108 @@
+.next_step_button{
+    border: .3px solid grey;
+    border-radius: 5px;
+    /* background-color: rgb(35, 57, 131); */
+    background-color: #43A838;
+    color: black;
+    text-align: center;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.time{
+    width: 100%;
+    /* animation: fadeIn 1s; */
+    height: auto;
+    max-height: 600px;
+    transition: all 2s;
+}
+
+.date{
+    /* position: relative; */
+    height: auto;
+    max-height: 600px;
+    transition: all 2s;
+}
+
+.ac{
+    height: auto;
+    max-height: 600px;
+    transition: all 2s;
+    position: relative;
+    z-index: 1000;
+    /* border: 1px solid rgba(133, 133, 133, 0.575); */
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+    /* box-shadow: 2px 2px 5px black; */
+}
+
+.address_suggestion{
+    margin: 5px 0;
+    /* border-bottom: 1px solid rgb(185, 185, 185); */
+    border: .3px solid rgb(192, 192, 192);
+    border-radius: 5px;
+    padding: 3px;
+    transition: all .5s;
+    background-color: grey;
+    animation: glow 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes glow {
+    0%{background-color: white;}
+    100%{background-color: rgb(233, 233, 233);}
+}
+
+.address_suggestion:hover{
+    animation-name: none;
+    background-color: grey;
+    cursor: pointer;
+}
+.address_suggestion:active{
+    background-color: grey;
+    cursor: pointer;
+}
+
+.mobile_pay_container{
+    position: relative;
+}
+
+.mobile_pay_button{
+    position: relative;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-size: 13px;
+    /* width: 100%; */
+    box-sizing: border-box;
+    transform: scale(1);
+    transition: all .3s;
+}
+
+
+.mobile_pay_button:active{
+    transform: scale(.9);
+}
+
+.mobile_pay_button svg{
+    color: white;
+    transform: scale(1.6);
+    margin: 0 4px;
+}
+
+/* @keyframes fadeIn {
+    from { 
+        transform-origin: top;
+        transform: );
+    }
+    to { 
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+} */

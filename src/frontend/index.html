@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="FavMowFo.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickMowFo</title>
+    <style>
+        /* Set the size of the div element that contains the map */
+        #map {
+            border: 1px solid black;
+            height: 400px;  /* The height is 400 pixels */
+            width: 50%;  /* The width is the width of the web page */
+            min-width: 300px;
+            margin: 0 auto;
+            /* transform: translate(0%, 50%); */
+        }
+        #map_modal{
+            position: absolute;
+            display: none;
+            top: 0;
+            align-items: center;
+            justify-content: center;
+            /* transform: translate(0%, 50%); */
+            z-index: 1000;
+            margin: 0 auto;
+            background-color: rgba(139, 139, 139, 0.589);
+            width: 100%;
+            height: 100%;
+         }
+      </style>
+</head>
+<body>
+    <div id="root"></div>
+    <div id="map_modal">
+        <!-- <button id="close_map">X</button> -->
+        <div id="map" class="fade-div"></div>
+    </div>
+    <script>
+        var map_modal = document.getElementById('map_modal');
+        document.addEventListener('click', function(e){
+            if(e.target == map_modal){
+                console.log('yeah')
+                map_modal.style.display = 'none'
+            } else {
+                console.log('no')
+            }
+        })
+        document.getElementById('close_map').addEventListener('click', function(){
+            document.getElementById('map_modal').style.display = 'none'
+        })
+        // Initialize and add the map
+        function initMap() {
+          // The location of Uluru
+          var uluru = {lat: 27.9839261, lng: -81.792916};
+          // The map, centered at Uluru
+          var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 8, center: uluru});
+          // The marker, positioned at Uluru
+        //   var marker = new google.maps.Marker({position: uluru, map: map});
+
+          new google.maps.Circle({
+            strokeColor: "#FF0000",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#FF0000",
+            fillOpacity: 0.35,
+            map,
+            center: {lat: 27.9839261, lng: -81.792916},
+            radius: 45000
+            });
+          new google.maps.Circle({
+            strokeColor: "#FF0000",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#FF0000",
+            fillOpacity: 0.35,
+            map,
+            center: {lat: 27.986191, lng: -82.378369},
+            radius: 20000
+            });
+          new google.maps.Circle({
+            strokeColor: "#FF0000",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#FF0000",
+            fillOpacity: 0.35,
+            map,
+            center: {lat: 28.407550, lng: -81.487563},
+            radius: 20000
+            });
+        }
+            </script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6qOUY3F4GA_8IiB4taXD58mfdNpYrPzM&callback=initMap">
+    </script>
+</body>
+</html>

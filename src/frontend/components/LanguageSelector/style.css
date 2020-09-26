@@ -1,0 +1,37 @@
+.language_selector{
+    cursor: pointer;
+    z-index: 0;
+    position: relative;
+    width: 100px;
+    margin: 10px auto;
+    background-color: rgba(128, 128, 128, 0.582);
+    border-radius: 15px;
+    color: white;
+    font-size: 10px;
+}
+
+.languages{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
+}
+
+.selected_bubble{
+    position: absolute;
+    z-index: -1;
+    background-color: #43A838;
+    width: 50%;
+    height: 100%;
+    transform: translateX(0%);
+    border-radius: 15px;
+    opacity: .8;
+    transition: all .2s ease-in;
+}
+
+.espanol{
+    transform: translateX(100%);
+}
+
+.english{
+    transform: translateX(0%);
+}

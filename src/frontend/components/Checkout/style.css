@@ -1,0 +1,27 @@
+.credit_card_media{
+    /* margin: 14px 0; */
+    /* border-top: 1px solid black; */
+}
+
+.mobile_pay_button{
+    border: 1px solid black;
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.stripe_card{
+    background-color: white;
+    position: relative;
+    border: 1px solid rgb(179, 179, 179);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.pay_button{
+    width: 100%;
+    margin: 8px 0;
+    /* background-color: rgb(87, 41, 87); */
+    color: white;
+}
